@@ -5,9 +5,11 @@ import java.sql.DriverManager;
 
 public class DBConnection {
     // variable for declaration
+    
     // -- package name for driver class (can get from OracleXE\app\oracle\product\11.2.0\server\jdbc\lib\ojdbc6.jar)
-    // jar is java archive -- use winrar to see what is inside
+    // -- jar is java archive -- use winrar to see what is inside
     private final String oracle_driver = "oracle.jdbc.OracleDriver"; 
+
     private final String oracle_url = "jdbc:oracle:thin:@localhost:1521:xe"; // API:Database:driver:hostname:port:servicename
     private final String user = "hr";
     private final String password = "system";
