@@ -51,7 +51,7 @@ public class EmployeesServlet extends HttpServlet {
                                 "join departments using (department_id)"
                 );
 
-                // check if there is any next rows in result
+                // check if there is any next rows
                 while(rs.next()) {
                     out.println("<tr>");
 
