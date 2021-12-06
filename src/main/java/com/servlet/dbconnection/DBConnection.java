@@ -12,19 +12,21 @@ public class DBConnection {
 
     // connection variable
     private static Connection conn = null;
+
+    // private constructor to prevent object instance
     private DBConnection() {
         try {
-            Class.forName(oracle_driver); // load oracle driver
-            conn = DriverManager.getConnection(oracle_url, user, password);
+            Class.forName(oracle_driver); // load oracle driver class
+            conn = DriverManager.getConnection(oracle_url, user, password); // assign connection
         } catch (Exception e){
             System.out.println(e.getMessage());
         }
     }
 
-    public static Connection getInstance() {
+    public static Connection getInstance() { // use DBConnection.getInstance() to get static connection
         if(conn == null) {
-            new DBConnection();
+            new DBConnection(); // run constructor to initialize connection
         }
-        return conn;
+        return conn; // return connection
     }
 }
