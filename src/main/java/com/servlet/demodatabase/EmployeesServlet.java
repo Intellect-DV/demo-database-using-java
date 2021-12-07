@@ -39,7 +39,7 @@ public class EmployeesServlet extends HttpServlet {
 
             out.println("</tr>");
             try {
-                Connection conn = DBConnection.getInstance(); // get Connection instance from Oracle Driver
+                Connection conn = DBConnection.getInstance(); // get Connection from static method
 
                 Statement stmt = conn.createStatement(); // create statement to execute
 
@@ -71,6 +71,6 @@ public class EmployeesServlet extends HttpServlet {
         } else {
             out.println("<h1>Cannot retrieve data</h1>");
         }
-        out.println("<body></html>");
+        out.println("</body></html>");
     }
 }
